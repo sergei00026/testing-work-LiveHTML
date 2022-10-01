@@ -27,21 +27,20 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.bottom-header__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper', { // Указываем скласс нужного слайдера
+		new Swiper('.bottom-header__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			autoHeight: true,
+			slidesPerView: 'auto',
+			// autoHeight: true,
 			speed: 800,
-
+			// freeMode: true,
 			//touchRatio: 0,
-			//simulateTouch: false,
+			simulateTouch: true,
 			//loop: true,
 			//preloadImages: false,
 			//lazy: true,
@@ -78,27 +77,22 @@ function initSliders() {
 			},
 
 			// Брейкпоинты
-			/*
+
 			breakpoints: {
 				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+					spaceBetween: 10,
 				},
 				768: {
-					slidesPerView: 2,
 					spaceBetween: 20,
 				},
 				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
+					spaceBetween: 3,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+				1100: {
+					spaceBetween: 36,
 				},
 			},
-			*/
+
 			// События
 			on: {
 
